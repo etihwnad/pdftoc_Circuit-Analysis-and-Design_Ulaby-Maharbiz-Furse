@@ -1,0 +1,401 @@
+(6) Brief Contents
+(7) Contents
+(11) List of Technology Briefs
+	(24) TB1 Micro- and Nanotechnology
+	(44) TB2 Voltage: How Big Is Big?
+	(71) TB3 Superconductivity
+	(84) TB4 Resistive Sensors
+	(104) TB5 Light-Emitting Diodes (LEDs)
+	(140) TB6 Measurement of Electrical Properties of Sea Ice
+	(150) TB7 Integrated Circuit Fabrication Process
+	(168) TB8 Digital and Analog
+	(204) TB9 Display Technologies
+	(217) TB10 Computer Memory Circuits
+	(239) TB11 Circuit Simulation Software
+	(279) TB12 Supercapacitors
+	(307) TB13 Hard Disk Drives (HDD)
+	(315) TB14 Capacitive Sensors
+	(351) TB15 Micromechanical Sensors and Actuators
+	(370) TB16 RFID Tags and Antenna Design
+	(377) TB17 Neural Stimulation and Recording
+	(407) TB18 Touchscreens and Active Digitizers
+	(437) TB19 Crystal Oscillators
+	(479) TB20 Electromagnetic Spectrum
+	(491) TB21 Seeing without Light
+	(523) TB22 Noise-Cancellation Headphones
+	(547) TB23 Spectral and Spatial Filtering
+	(558) TB24 Electrical Engineering and the Audiophile
+	(591) TB25 Miniaturized Energy Harvesting
+	(600) TB26 Inside a Power Generation Station
+	(622) TB27 Magnetic Resonance Imaging (MRI)
+	(651) TB28 3-D TV
+	(662) TB29 Mapping the Entire World in 3-D
+	(702) TB30 Bandwidth, Data Rate, and Communication
+	(709) TB31 Synthetic Biology
+	(716) TB32 Brain-Machine Interfaces (BMI)
+(12) Front matter
+	(12) Preface
+	(13) Acknowledgments
+	(14) Photo Credits
+(15) 1 Circuit Terminology
+	(17) Overview
+	(18) 1-1 Historical Timeline
+	(23) 1-2 Units, Dimensions, and Notation
+	(29) 1-3 Circuit Representation
+	(34) 1-4 Electric Charge and Current
+	(39) 1-5 Voltage and Power
+	(49) 1-6 Circuit Elements
+	(55) Summary
+	(56) Problems
+(64) 2 Resistive Circuits
+	(65) Overview
+	(65) 2-1 Ohms Law
+		(66) 2-1.1 Resistance
+		(68) 2-1.2 i-v Characteristics of Ideal Resistor
+		(69) 2-1.3 Series and Parallel Connections
+		(73) 2-1.4 i-v Characteristics of LEDs
+		(74) 2-1.5 Conductance
+	(74) 2-2 Kirchhoff’s Law
+		(74) 2-2:1 KCL
+		(76) 2-2:2 KVL
+	(81) 2-3 Equivalent Circuits
+		(82) 2-3.1 Resistors in Series
+		(83) 2-3.2 Sources in Series
+		(87) 2-3.3 Resistors and Sources in Parallel
+	(94) 2-4 Wye–Delta (Y–Δ) Transformation
+		(96) 2-4.1 Delta->Wye
+		(96) 2-4.2 Wye->Delta
+		(97) 2-4.3 Balanced Circuits
+	(98) 2-5 The Wheatstone Bridge
+	(100) 2-6 App Note: Linear versus Nonlinear i–v Relationships
+		(100) 2-6.1 The Fuse: A Simple Nonlinear Element
+		(101) 2-6.2 The Diode: A Solid-State Nonlinear Element
+		(107) 2-6.3 Piezoresistor Circuit
+	(108) 2-7 Introducing Multisim
+		(108) 2-7.1 Drawing the Circuit
+		(110) 2-7.1 Solving the Circuit
+		(111) 2-7.1 Dependent Sources
+	(114) Summary
+	(115) Problems
+(129) 3 Analysis Techniques
+	(130) Overview
+	(130) 3-1 Linear Circuits
+		(130) 3-1.1 Homogeneity Property
+		(130) 3-1.2 Superposition Principle
+		(130) 3-1.3 Linear and Nonlinear Elements
+		(131) 3-1.4 Advantages of Linear Circuits
+	(131) 3-2 Node-Voltage Method
+		(131) 3-2.1 General Procedure
+		(134) 3-2.2 Circuits Containing Dependent Sources
+		(135) 3-2.3 Supernodes
+	(137) 3-3 Mesh-Current Method
+		(137) 3-3.1 General Procedure
+		(139) 3-3.2 Circuit with Dependent Sources
+		(142) 3-3.3 Supermeshes
+	(143) 3-4 By-Inspection Methods
+		(144) 3-4.1 Nodal Analysis by Inspection
+		(146) 3-4.2 Mesh Analysis by Inspection
+	(147) 3-5 Linear Circuits and Source Superposition
+	(154) 3-6 Thevenin and Norton Equivalent Circuits
+		(155) 3-6.1 Input and Output Resistances
+		(157) 3-6.2 Thevenins Theorem
+		(158) 3-6.3 Finding v_TH
+		(158) 3-6.4 Finding R_TH Short-Circuit Method
+		(160) 3-6.5 Finding R_TH Equivalent Resistance Method
+		(161) 3-6.6 Finding R_TH External-Source Method
+		(163) 3-6.7 Nortons Theorem
+		(163) 3-6.8 Analyzing Cascaded Systems
+	(165) 3-7 Comparison of Analysis Methods
+	(165) 3-8 Maximum Power Transfer
+	(166) Summary of circuit analysis methods Table 3-2
+	(172) 3-9 App Note: Bipolar Junction Transistor (BJT)
+	(175) 3-10 Nodal Analysis with Multisim
+	(178) Summary
+	(179) Problems
+(197) 4 Operational Amplifiers
+	(198) 4-1 Op-Amp Characteristics
+		(198) 4-1.1 Nomenclature
+		(200) 4-1.2 Transfer Characteristics
+		(201) 4-1.3 Op-Amp Switch
+		(201) 4-1.4 Equivalent-Circuit Model in Linear Region
+	(209) 4-2 Negative Feedback
+	(210) 4-3 Ideal Op-Amp Model
+	(212) 4-4 Inverting Amplifier
+	(214) 4-5 Inverting Summing Amplifier
+		(215) 4-5.1 Special Cases
+		(215) 4-5.2 Noninverting Summer
+		(216) 4-5.3 Multiple Ways of Building a System
+	(220) 4-6 Difference Amplifier
+	(222) 4-7 Voltage Follower/Buffer
+		(222) 4-7.1 No Buffer
+		(222) 4-7.2 With Op-Amp Buffer
+		(222) 4-7.3 Input-Output Resistance
+	(223) 4-8 Op-Amp Signal-Processing Circuits
+	(224) Summary of op-amp circuits Table 4-3
+	(228) 4-9 Instrumentation Amplifier
+	(230) 4-10 Digital-to-Analog Converters (DAC)
+	(233) 4-11 MOSFET as a Voltage-Controlled Current Source VCCS
+		(234) 4-11.1 Digital Inverter
+		(235) 4-11.2 NMOS vs PMOS Transistors
+		(237) 4-11.3 MOSFETs in Analog Circuits
+	(243) 4-12 App Note: Neural Probes
+	(244) 4-13 Multisim Analysis
+		(244) 4-13.1 Op-Amps and Virtual Instruments
+		(245) 4-13.2 The Digital Inverter
+	(249) Summary
+	(250) Problems
+(262) 5 RC and RL 1st-Order Circuits
+	(263) Overview
+	(264) 5-1 Nonperiodic Waveforms
+		(264) 5-1.1 Step-Function
+		(266) 5-1.2 Ramp-Function
+		(267) 5-1.3 Pulse
+		(270) 5-1.4 Exponential
+	(272) 5-2 Capacitors
+		(273) 5-2.1 Electrical Properties
+		(277) 5-2.2 Series and Parallel Combinations
+	(283) 5-3 Inductors
+		(284) 5-3.1 Electrical Properties
+		(287) 5-3.2 Series and Parallel Combinations
+	(289) 5-4 RC Circuit Response
+		(290) 5-4.1 Natural Response of a Charged Capacitor
+		(293) 5-4.2 General Form of the Step Response of the RC Circuit
+		(294) 5-4.3 Thevenin Approach
+	(301) 5-5 RL Circuit Response
+		(301) 5-5.1 Natural Response of the RL Circuit
+		(302) 5-5.2 General Form of the Step Response for the RL Circuit
+	(309) 5-6 RC Op-Amp Circuits
+		(309) 5-6.1 Ideal Op-Amp Integrator
+		(311) 5-6.2 Ideal Op-Amp Differentiator
+		(311) 5-6.3 Other Op-Amp Circuits
+	(319) 5-7 App Note: Parasitic Capacitance and Computer Processor Speed
+		(320) 5-7.1 Parasitic Capacitance
+		(320) 5-7.2 CMOS Switching Speed
+	(324) 5-8 Analyzing Circuit Response with Multisim
+		(324) 5-8.1 Modeling Switches in Multisim
+		(325) 5-8.2 Modeling Time-Dependent Sources in Multisim
+	(327) Summary
+	(328) Problems
+(344) 6 RLC Circuits
+	(345) 6-1 Initial and Final Conditions
+	(348) 6-2 Series RLC Circuit Intro
+		(348) 6-2.1 Charging-Up Mode
+		(350) 6-2.2 Discharging Mode
+	(355) 6-3 Series RLC Overdamped Response
+		(355) 6-3.1 Differential Equation
+		(355) 6-3.2 Solution of Diff Eq
+		(356) 6-3.3 Invoking Initial Conditions
+	(357) Step response of RLC circuits Table 6-1
+	(360) 6-4 Series RLC Critically Damped Response
+	(362) 6-5 Series RLC Underdamped Response
+	(363) 6-6 Summary of Series RLC
+		(363) 6-6.1 Switch Action at t=0
+		(363) 6-6.2 Switch Action at t=T0
+	(367) 6-7 Parallel RLC Circuit
+	(373) 6-8 General Solution for Any 2nd-Order Circuit with dc Sources
+	(383) 6-9 Multisim Analysis of Circuit Response
+		(383) 6-9.1 Series RLC
+		(384) 6-9.2 RFID Circuit
+	(387) Summary
+	(388) Problems
+(399) 7 ac Analysis
+	(400) 7-1 Sinusoidal Signals
+	(403) 7-2 Review of Complex Algebra
+	(405) Properties of complex numbers Table 7-2
+	(410) 7-3 Phasor Domain
+		(410) 7-3.1 Time-Domain / Phasor Domain Correspondence
+		(411) 7-3.2 Impedance of Circuit Elements
+	(413) Summary of v-i properties of R, L, C
+	(414) 7-4 Phasor-Domain Analysis
+	(417) 7-5 Impedance Transformations
+		(418) 7-5.1 Impedances in Series and in Parallel
+		(421) 7-5.2 Y-Δ Transformation
+	(424) 7-6 Equivalent Circuits
+		(424) 7-6.1 Source Transformation
+		(424) 7-6.2 Thevenin Equivalent Circuit
+	(427) 7-7 Phasor Diagrams
+	(430) 7-8 Phase-Shift Circuits
+	(434) 7-9 Phasor-Domain Analysis Techniques
+	(443) 7-10 ac Op-Amp Circuits
+	(445) 7-11 Op-Amp Phase Shifter
+	(446) 7-12 App Note: Power-Supply Circuits
+		(446) 7-12.1 Ideal Transformers
+		(447) 7-12.2 Rectifiers
+		(448) 7-12.3 Smoothing Filters
+		(450) 7-12.4 Voltage Regulator
+	(451) 7-13 Multisim Analysis of ac Circuits
+	(457) Summary
+	(458) Problems
+(473) 8 ac Power
+	(474) 8-1 Periodic Waveforms
+		(474) 8-1.1 Instantaneous and Average Values
+		(476) 8-1.2 Root-Mean-Square (rms) Value
+	(477) 8-2 Average Power
+	(481) 8-3 Complex Power
+		(482) 8-3.1 Complex Power for a Load
+		(483) 8-3.2 Conservation of Complex Power
+	(486) Summary of power-related quantities Table 8-1
+	(486) 8-4 The Power Factor
+		(487) 8-4.1 Power Factor Significance
+		(488) 8-4.2 Power Factor Compensation
+	(490) 8-5 Maximum Power Transfer
+	(496) 8-6 Measuring Power with Multisim
+	(499) Summary
+	(500) Problems
+(514) 9 Frequency Response of Circuits and Filters
+	(515) 9-1 The Transfer Function
+		(516) 9-1.1 Terminology
+		(518) 9-1.2 RC Circuit Example
+	(521) 9-2 Scaling
+		(521) 9-2.1 Magnitude
+		(522) 9-2.2 Frequency
+		(522) 9-2.3 Combined Magnitude and Frequency
+	(526) 9-3 Bode Plots
+		(526) 9-3.1 The dB Scale
+		(529) 9-3.2 Poles and Zeros
+		(530) 9-3.3 Functional Forms
+		(532) 9-3.4 General Observations
+	(536) 9-4 Passive Filters
+		(537) 9-4.1 Bandpass Filter
+		(540) Attributes of series and parallel RLC bandpass circuits Table 9-3
+		(542) 9-4.2 Highpass Filter
+		(543) 9-4.3 Lowpass Filter
+		(543) 9-4.4 Bandreject Filter
+	(544) 9-5 Filter Order
+		(544) 9-5.1 1st-Order Lowpass RC Filter
+		(546) 9-5.2 2nd-Order Lowpass Filter
+		(550) 9-5.3 RLC Bandpass Filter
+	(550) 9-6 Active Filters
+		(551) 9-6.1 Single-Pole Lowpass
+		(551) 9-6.2 Single-Pole Highpass
+	(552) 9-7 Cascaded Active Filters
+	(561) 9-8 App Note: Modulation and the Superheterodyne Receiver
+		(561) 9-8.1 Modulation
+		(562) 9-8.2 The Superheterodyne Receiver
+		(563) 9-8.3 Frequency Conversion
+		(564) 9-8.4 Software Radio
+	(564) 9-9 Spectral Response with Multisim
+	(569) Summary
+	(570) Problems
+(580) 10 Three-Phase Circuits
+	(581) Overview
+	(582) 10-1 Balanced Three-Phase Generators
+	(586) 10-2 Source-Load Configurations
+		(586) 10-2.1 Y and Δ Notation
+		(586) 10-2.2 Balanced Conditions
+	(588) 10.3 Y-Y Configuration
+	(590) 10-4 Balanced Networks
+		(590) 10-4.1 Transformation Between Balanced Sources
+		(590) 10-4.2 Transformation Between Balanced Loads
+		(593) 10-4.3 Single-Phase Equivalent Circuits
+	(596) 10-5 Power in Balanced Three-Phase Networks
+		(596) 10-5.1 Y-Load Configuration
+		(597) 10-5.2 Δ-Load Configuration
+		(597) 10-5.3 Total Instantaneous Power
+	(602) 10-6 Power-Factor Compensation
+	(605) 10-7 Power Measurement in Three-Phase Circuits
+	(609) Summary
+	(610) Problems
+(615) 11 Magnetically Coupled Circuits
+	(616) 11-1 Magnetic Coupling
+	(625) 11-2 Transformers
+		(625) 11-2.1 Coupling Coefficient
+		(626) 11-2.2 Input Impedance
+		(627) 11-2.3 Equivalent Circuits
+	(629) 11-3 Energy Considerations
+	(631) 11-4 Ideal Transformers
+		(632) 11-4.1 Input Impedance
+		(632) 11-4.2 Equivalent Circuits
+	(633) 11-5 Three-Phase Transformers
+	(636) Summary
+	(637) Problems
+(644) 12 Circuit Analysis by Laplace Transform
+	(645) 12-1 Unit Impulse Function
+		(646) 12-1.1 Relationship Between u(t) and δ(t)
+		(646) 12-1.2 Sampling Property of δ(t)
+	(647) 12-2 The Laplace Transform Technique
+		(648) 12-2.1 Definition of the Laplace Transform
+		(648) 12-2.2 Convergence Condition
+		(649) 12-2.3 Inverse Laplace Transform
+	(653) 12-3 Properties of the Laplace Transform
+		(653) 12-3.1 Time Scaling
+		(653) 12-3.2 Time Shift
+		(654) 12-3.3 Frequency Shift
+		(654) 12-3.4 Time Differentiation
+		(654) 12-3.5 Time Integration
+	(655) 12-4 Circuit Analysis Procedure
+	(656) Properties of the Laplace transform Table 12-1
+	(657) Laplace transform pairs Table 12-2
+	(658) 12-5 Partial Fraction Expansion
+		(659) 12-5.1 Distinct Real Poles
+		(660) 12-5.2 Repeated Real Poles
+		(664) 12-5.3 Distinct Complex Poles
+	(666) 12-6 s-Domain Circuit Element Models
+		(667) 12-6.1 Resistor
+		(667) 12-6.2 Inductor
+		(667) 12-6.3 Capacitor
+		(667) 12-6.4 Impedance
+	(668) Circuit models for R, L, C in the s-domain Table 12-4
+	(669) 12-7 s-Domain Circuit Analysis
+	(676) 12-8 Multisim Analysis of Circuits Driven by Nontrivial Inputs
+	(679) Summary
+	(679) Problems
+(688) 13 Fourier Analysis Technique
+	(689) 13-1 Fourier Series Analysis Technique
+	(691) 13-2 Fourier Series Representation
+		(692) 13-2.1 Sine/Cosine Representation
+		(695) 13-2.2 Amplitude and Phase Representation
+		(697) 13-2.3 Symmetry Considerations
+		(697) 13-2.4 Even-Function Fourier Coefficients
+		(698) 13-2.5 Odd-Function Fourier Coefficients
+		(699) Fourier series expressions for common periodic waveforms Table 13-2
+	(704) 13-3 Circuit Applications
+	(707) 13-4 Average Power
+	(711) 13-5 Fourier Transform
+		(711) 13-5.1 Exponential Fourier Series
+		(713) 13-5.2 Nonperiodic Waveforms
+		(718) 13-5.3 Convergence of the Fourier Integral
+	(718) 13-6 Fourier Transform Pairs
+		(718) 13-6.1 Linearity Property
+		(718) 13-6.2 __ of δ(t-t0)
+		(719) 13-6.3 Shift Properties
+		(719) 13-6.4 __ of cos(ω0 t)
+		(720) 13-6.5 __ of Ae^(-at)u(t) for a>0
+		(720) 13-6.6 __ of u(t)
+		(722) Fourier transform pairs Table 13-4
+		(723) Properties of the Fourier transform Table 13-5
+		(724) 13-6.7 Parseval Theorem
+	(724) 13-7 Phasor vs Laplace vs Fourier
+	(725) 13-8 Circuit Analysis with Fourier Transform
+		(726) Methods of solution Table 13-6
+	(727) 13-9 Multisim: Mixed-Signal Circuits and the Sigma-Delta Modulator
+		(727) 13-9.1 The Sigma-Delta (Σ-Δ) Modulator and Analog-to-Digital Converters
+		(729) 13-9.2 How the Σ-Δ Works
+	(731) Summary
+	(732) Problems
+(741) A Symbols, Quantities, and Units
+(743) B Solving Simultaneous Equations
+	(743) B-1 Review of Cramers Rule
+		(743) B-1.1 System of Order 3
+		(745) B-1.2 System of Order n
+	(745) B-2 Matrix Solution Method
+	(746) B-3 MATLAB of MathScript Solution
+(747) C Overview of Multisim
+(750) D Mathematical Formulas
+	(750) D-1 Trigonometric Relations
+	(750) D-2 Indefinite Integrals
+	(751) D-3 Definite Integrals
+(752) E MATLAB and MathScript
+	(752) E-1 Background
+	(753) E-2 Basic Computation
+		(753) E-2.1 Basic Arithmetic
+		(753) E-2.2 Entering Vectors and Arrays
+		(753) E-2.3 Array Operations
+		(754) E-2.4 Solving Systems of Equations
+	(754) E-3 Partial Fractions
+		(754) E-3.1 Rectangular-to-Polar Complex Conversion
+		(755) E-3.2 Polynomial Zeros
+		(755) E-3.3 Partial Fraction Expansions
+(757) F myDAQ Quick Reference Guide
+(775) G Answers to Selected Problems
+(781) Index
