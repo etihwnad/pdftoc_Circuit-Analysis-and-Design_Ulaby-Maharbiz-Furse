@@ -1,5 +1,4 @@
 
-
 # The book's copyright notice:
 #   Copyright  2018 Fawwaz T. Ulaby, Michel M. Maharbiz, Cynthia M. Furse
 #   This book is published by Michigan Publishing under an agreement with the
@@ -8,20 +7,22 @@
 #
 # I _think_ this means it is okay to include the original PDF in this
 # repository.
-SOURCE=CAD101.pdf
 
-INFO=toc.info
+# modify these as appropriate
+SOURCE=CAD101.pdf
+TOC=toc.votl
 OUTPUT=Circuit-Analysis-and-Design_Ulaby-Maharbiz-Furse.pdf
+
 
 
 default: $(OUTPUT)
 
-
 # mark the generated info file as transient
 # this may need to change if the file is to include more than the ToC
+INFO=$(TOC:.votl=.info)
 .INTERMEDIATE: $(INFO)
 
-$(INFO): toc.votl totoc.py
+$(INFO): $(TOC) totoc.py
 	./totoc.py $< > $@
 
 $(OUTPUT): $(SOURCE) $(INFO)

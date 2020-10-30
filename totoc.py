@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# Output a format suitable for pdftk update_info
+
 import re
 
 fmt = """BookmarkBegin
@@ -7,7 +9,7 @@ BookmarkTitle: {title}
 BookmarkLevel: {level}
 BookmarkPageNumber: {page}"""
 
-page_re = re.compile(r'\((\d+)\)')
+page_re = re.compile(r'^\t*\((\d+)\)')
 
 with open('toc.votl') as f:
     for line in f:
