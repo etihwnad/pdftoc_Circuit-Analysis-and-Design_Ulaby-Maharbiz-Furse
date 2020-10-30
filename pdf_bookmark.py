@@ -1,5 +1,34 @@
 #!/usr/bin/env python
 
+
+# originally from:
+# https://github.com/xianghuzhao/pdf-bookmark
+#
+# modified to allow a second input format
+
+# MIT License
+#
+# Copyright (c) 2019 Xianghu Zhao
+# Copyright (c) 2020 Dan White
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
 # pylint: disable=invalid-name
 
 '''
@@ -80,6 +109,7 @@ _BOOKMARK_DESCRIPTION = {
     },
 }
 
+_PAGE_RE = re.compile(r'^\t*\((\d+)\)')
 
 _UNICODE_REGEXP = re.compile('&#([0-9]+);')
 
@@ -361,7 +391,7 @@ def _parse_bookmark_command(line):
 def _parse_level(line, level_indent):
     space_count = 0
     for c in line:
-        if c != ' ':
+        if c not in ' \t':
             break
         space_count += 1
 
@@ -373,19 +403,24 @@ def _parse_level(line, level_indent):
 
 
 def _split_title_page(title_page):
-    start_pos = title_page.find('.'*_CONTENT_MINIMUM_DOTS)
-    if start_pos < 0:
-        raise InvalidBookmarkSyntaxError(
-            'There must be at least {} "." specified'.format(_CONTENT_MINIMUM_DOTS))
+    m = _PAGE_RE.search(title_page)
+    if m is not None:
+        page = m.group(1)
+        title = title_page[m.end():].lstrip()
+    else:
+        start_pos = title_page.find('.'*_CONTENT_MINIMUM_DOTS)
+        if start_pos < 0:
+            raise InvalidBookmarkSyntaxError(
+                'There must be at least {} "." specified'.format(_CONTENT_MINIMUM_DOTS))
 
-    end_pos = start_pos + _CONTENT_MINIMUM_DOTS
-    for c in title_page[start_pos+_CONTENT_MINIMUM_DOTS:]:
-        if c != '.':
-            break
-        end_pos += 1
+        end_pos = start_pos + _CONTENT_MINIMUM_DOTS
+        for c in title_page[start_pos+_CONTENT_MINIMUM_DOTS:]:
+            if c != '.':
+                break
+            end_pos += 1
 
-    title = title_page[:start_pos]
-    page = title_page[end_pos:]
+        title = title_page[:start_pos]
+        page = title_page[end_pos:]
 
     return title.strip(), page.strip()
 
