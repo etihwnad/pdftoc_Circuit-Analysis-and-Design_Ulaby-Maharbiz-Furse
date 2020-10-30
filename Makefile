@@ -17,20 +17,13 @@ OUTPUT=Circuit-Analysis-and-Design_Ulaby-Maharbiz-Furse.pdf
 
 default: $(OUTPUT)
 
-# mark the generated info file as transient
-# this may need to change if the file is to include more than the ToC
-INFO=$(TOC:.votl=.info)
-.INTERMEDIATE: $(INFO)
 
-$(INFO): $(TOC) totoc.py
-	./totoc.py $< > $@
-
-$(OUTPUT): $(SOURCE) $(INFO)
-	pdftk $(SOURCE) update_info $(INFO) output $(OUTPUT)
-
+$(OUTPUT): $(SOURCE) $(TOC)
+	./pdf_bookmark.py --collapse-level 1 --format none \
+	    --pdf $(SOURCE) \
+	    --bookmark $(TOC) \
+	    --output-pdf $(OUTPUT)
 
 clean:
-	rm -f $(INFO)
+	rm -f $(OUTPUT)
 
-clean-all: clean
-	rm -f $(SOURCE)
