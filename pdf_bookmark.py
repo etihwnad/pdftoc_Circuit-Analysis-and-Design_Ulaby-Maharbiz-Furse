@@ -620,8 +620,9 @@ def generate_pdf(pdfmark, pdf, output_pdf):
     pdfmark_restore = _write_pdfmark_restore_file()
     pdfmark_pagemode = _write_pdfmark_pagemode()
 
-    call(['gs', '-dBATCH', '-dNOPAUSE', '-sDEVICE=pdfwrite',
-          '-sOutputFile={}'.format(output_pdf),
+    call(['gs', '-dBATCH', '-dNOPAUSE',
+          '-dPDFSETTINGS=/printer',
+          '-sDEVICE=pdfwrite', '-sOutputFile={}'.format(output_pdf),
           pdfmark_noop,
           pdf,
           pdfmark_restore,
