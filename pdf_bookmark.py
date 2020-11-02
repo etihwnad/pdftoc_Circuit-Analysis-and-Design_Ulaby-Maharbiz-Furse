@@ -621,7 +621,8 @@ def generate_pdf(pdfmark, pdf, output_pdf):
     pdfmark_pagemode = _write_pdfmark_pagemode()
 
     call(['gs', '-dBATCH', '-dNOPAUSE',
-          '-dPDFSETTINGS=/printer',
+          '-dPDFSETTINGS=/prepress',
+          '-sColorConversionStrategy=RGB',
           '-sDEVICE=pdfwrite', '-sOutputFile={}'.format(output_pdf),
           pdfmark_noop,
           pdf,
